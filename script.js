@@ -12,6 +12,8 @@ function activateButton(){
             userInput = parseInt(prompt("Enter the number of squares per row: "));
         }while(userInput > 100);
 
+        if(isNaN(userInput))
+            userInput = 16;
         removeGrid();
         createGrid(userInput);
     });
